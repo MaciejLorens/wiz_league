@@ -1,3 +1,63 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.map {
+  width: 660px;
+  border: 1px solid black;
+}
+
+.flex-grid {
+  display: flex;
+}
+
+.cell {
+  flex: 1;
+  border: 1px solid black;
+}
+
+.cell-inner {
+  height: 60px;
+
+  &.selected {
+    background-color: lightcoral;
+  }
+
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
+
+
+// ==== hex
+.container {
+  --s: 150px;  /* size  */
+  --m: 4px;    /* space */
+  font-size: 0;  /* disable default white space between inline element */
+}
+
+.container div {
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s)*1.15); /*  = 1/cos(30)  */
+  display: inline-block;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+  background: url(https://picsum.photos/200) center/cover;
+  margin-bottom: calc(var(--m) + var(--s)*-0.2885); /* = tan(30)/2 */
+}
+
+.container::before {
+  content: "";
+  width: calc(var(--s)/2 + var(--m));
+  float: left;
+  height: 100%;
+  shape-outside:
+    repeating-linear-gradient(
+        transparent 0 calc(var(--s)*1.15 + var(--s)/4 + 2*var(--m)),
+        #fff        0 calc(var(--s)*1.15 + var(--s)*1.15/2 + 3*var(--m)));
+}
+
+.main {
+  display:flex;
+  /* the extra flex wrapper will give me the default stretch alignment
+    and this will allow me to use height:100% on child element of container
+    without any explicit height!
+    a crazy hack, I know .. */
+}
