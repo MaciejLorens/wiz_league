@@ -6,6 +6,10 @@ class CounterReflex < ApplicationReflex
   def select
     row = element.dataset[:row]
     cell = element.dataset[:cell]
-    morph "##{element.id}", render(partial: 'home/cell', locals: { row: row, cell: cell, selected: 'selected' })
+
+    cable_ready["visitors"].inner_html(selector: "##{element.id}", html: render(partial: 'home/cell', locals: { row: row, cell: cell, selected: 'selected' }))
+    cable_ready["visitors"].broadcast
+
+    morph :nothing
   end
 end
