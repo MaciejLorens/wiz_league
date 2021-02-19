@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da193253-14f4-4792-9be1-084cf317a3ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/home/_map.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/wiz_league.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wiz_league.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/reflexes/counter_reflex.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/reflexes/counter_reflex.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1oTfRT8bikfswvVMmJncTygRsXs" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/home" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,6 +46,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/home" />
+    </key>
   </component>
   <component name="RunManager" selected="Rails.Development: wiz_league">
     <configuration name="Development: wiz_league" type="RailsRunConfigurationType" factoryName="Rails">
@@ -159,7 +166,11 @@
       <updated>1613315493076</updated>
       <workItem from="1613315496316" duration="12241000" />
       <workItem from="1613380806553" duration="508000" />
-      <workItem from="1613406233548" duration="7000" />
+      <workItem from="1613406233548" duration="367000" />
+      <workItem from="1613421913745" duration="3343000" />
+      <workItem from="1613462093101" duration="610000" />
+      <workItem from="1613744057080" duration="2712000" />
+      <workItem from="1613759609121" duration="6675000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,48 @@
+.container {
+  width: 1000px;
+  height: 1000px;
+  margin-top: 114px;
+}
+
+ol {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+ol.even {
+  margin-left: 72px;
+  margin-top: calc((54px * -1.732050808) / 2)
+}
+
+ol.odd {
+  margin-top: calc(-50px + 2px)
+}
+
+li.hex {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin-right: calc(50px - 10px);
+  margin-top: -14px;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  background: black;
+}
+
+.hex-inner {
+  width: 94px;
+  height: 94px;
+  margin: 3px;
+  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  background: forestgreen;
+
+  &:hover {
+    background-color: darkgreen;
+  }
+}

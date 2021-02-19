@@ -7,18 +7,20 @@
    data-count="<%= @count.to_i %>"
 >Increment <%= @count.to_i %></a>
 
+<%= render partial: 'map' %>
 
-<div class="map">
-  <% (0..10).each do |row| %>
-    <div class="flex-grid">
-      <% (0..10).each do |cell| %>
-        <div id="cell_<%= row %>_<%= cell %>" data-row="<%= row %>" data-cell="<%= cell %>" class="cell" data-reflex="click->Counter#select">
-          <%= render partial: 'cell', locals: {row: row, cell: cell, selected: ''} %>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+
+<!--<div class="map">-->
+  <%# (0..10).each do |row| %>
+<!--    <div class="flex-grid">-->
+      <%# (0..10).each do |cell| %>
+<!--        <div id="cell_<%#= row %>_<%#= cell %>" data-row="<%#= row %>" data-cell="<%#= cell %>" class="cell" data-reflex="click->Counter#select">-->
+          <%#= render partial: 'cell', locals: {row: row, cell: cell, selected: ''} %>
+<!--        </div>-->
+      <%# end %>
+<!--    </div>-->
+  <%# end %>
+<!--</div>-->
 
 
 <!--<div class="main">-->
