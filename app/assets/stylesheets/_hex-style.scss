@@ -1,8 +1,12 @@
 .container {
-  width: 1000px;
+  width: 1200px;
   height: 1000px;
   margin-top: 114px;
 }
+
+$hex_size: 120px;
+$radius: calc(#{$hex_size} / 2);
+$border: 4px;
 
 ol {
   margin-block-start: 0;
@@ -13,33 +17,34 @@ ol {
 }
 
 ol.even {
-  margin-left: 72px;
-  margin-top: calc((54px * -1.732050808) / 2)
+  margin-left: calc(#{$radius} * 3 / 2 - #{$border});
+  margin-top: calc((#{$radius} + 4 * #{$border}) * -1.732050808 / 2);
 }
 
 ol.odd {
-  margin-top: calc(-50px + 2px)
+  margin-top: calc(-1 * #{$radius} + -1 * #{$border})
 }
 
 li.hex {
+  margin-top: calc(-2 * #{$border});
+  margin-bottom: calc(-2 * #{$border});
   position: relative;
   display: inline-block;
   cursor: pointer;
-  width: 100px;
-  height: 100px;
-  margin-right: calc(50px - 10px);
-  margin-top: -14px;
+  margin-right: calc(#{$radius} - 3 * #{$border});
+  margin-top: calc(-0 * #{$radius});
   -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   background: black;
 }
 
 .hex-inner {
-  width: 94px;
-  height: 94px;
-  margin: 3px;
   -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+
+  width: calc(#{$hex_size} - 2 * #{$border});
+  height: calc(#{$hex_size} - 2 * #{$border});
+  margin: $border;
   background: forestgreen;
 
   &:hover {

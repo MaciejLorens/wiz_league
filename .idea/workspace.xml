@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da193253-14f4-4792-9be1-084cf317a3ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/home/_map.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wiz_league.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wiz_league.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_hex-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_hex-style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +166,7 @@
       <workItem from="1613421913745" duration="3343000" />
       <workItem from="1613462093101" duration="610000" />
       <workItem from="1613744057080" duration="2712000" />
-      <workItem from="1613759609121" duration="6675000" />
+      <workItem from="1613759609121" duration="9383000" />
     </task>
     <servers />
   </component>
