@@ -31,7 +31,7 @@ ol.odd {
   margin-left: calc(#{$radius} - 0.5 * #{$border});
 }
 
-li.hex {
+.hex {
   margin-bottom: calc(-2 * #{$border});
   position: relative;
   display: inline-block;
@@ -96,7 +96,7 @@ li.hex {
   }
 }
 
-li.hex-offset {
+.hex-offset {
   margin-bottom: calc(-2 * #{$border});
   position: relative;
   display: inline-block;
