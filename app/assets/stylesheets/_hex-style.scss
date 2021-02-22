@@ -2,6 +2,7 @@ $road_color: #4b0e0e;
 $grass_color: #228b22;
 $river_color: #227b8b;
 $mountain_color: #504646;
+$player_color: #FFFF00;
 
 $hex_size: 80px;
 $radius: calc(#{$hex_size} / 2);
@@ -79,6 +80,14 @@ li.hex {
       &:hover {
         background-color: darken($mountain_color, 10%)
       }
+    }
+
+    &.bedrock {
+      background-color: #000000;
+    }
+
+    &.player {
+      background-color: $player_color;
     }
   }
 }

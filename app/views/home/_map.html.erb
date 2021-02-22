@@ -9,7 +9,11 @@
 
       <% (2 * @range + 1 - (@range - row).abs).times do |hex| %>
         <% hex = @hexes.shift %>
-        <%= render partial: 'hex', locals: {hex: hex} if hex.present? %>
+        <% if hex.terrain == 'bedrock' %>
+          <%= render partial: 'hex_offset' %>
+        <% else %>
+          <%= render partial: 'hex', locals: { hex: hex } if hex.present? %>
+        <% end %>
       <% end %>
     </ol>
   <% end %>

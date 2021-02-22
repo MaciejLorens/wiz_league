@@ -1,4 +1,8 @@
 <li class="hex" id="<%= hex.x %>_<%= hex.y %>">
-  <div class="hex-inner <%= hex.terrain %>" style="font-size: 10px">
+  <div class="hex-inner <%= hex.terrain %> <%= hex.player_id ? 'player' : '' %>">
+    <% if hex.player_id %>
+      <br>
+      <%= hex.q %> | <%= hex.r %>
+    <% end %>
   </div>
 </li>

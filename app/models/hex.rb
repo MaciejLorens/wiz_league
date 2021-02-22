@@ -18,7 +18,6 @@ class Hex
 
   def neighbors(range)
     self.class.nearby(location, range).order(r: :asc, q: :asc).select { |hex| self.distance(hex) <= range }
-    # Hex.order(r: :asc, q: :asc).select { |hex| self.distance(hex) <= range }
   end
 
   def distance(hex)
