@@ -4,6 +4,11 @@
     <list default="true" id="da193253-14f4-4792-9be1-084cf317a3ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_hex-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_hex-style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/_even.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_even.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/_hex.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_hex.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/_map.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_map.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/_odd.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_odd.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +171,10 @@
       <workItem from="1613421913745" duration="3343000" />
       <workItem from="1613462093101" duration="610000" />
       <workItem from="1613744057080" duration="2712000" />
-      <workItem from="1613759609121" duration="9383000" />
+      <workItem from="1613759609121" duration="11832000" />
+      <workItem from="1613808201133" duration="6410000" />
+      <workItem from="1613932678532" duration="2757000" />
+      <workItem from="1613983174560" duration="11817000" />
     </task>
     <servers />
   </component>

@@ -1,12 +1,17 @@
+$road_color: #4b0e0e;
+$grass_color: #228b22;
+$river_color: #227b8b;
+$mountain_color: #504646;
+
+$hex_size: 80px;
+$radius: calc(#{$hex_size} / 2);
+$border: 4px;
+
 .container {
   width: 1200px;
   height: 1000px;
-  margin-top: 114px;
+  margin-top: 14px;
 }
-
-$hex_size: 120px;
-$radius: calc(#{$hex_size} / 2);
-$border: 4px;
 
 ol {
   margin-block-start: 0;
@@ -17,37 +22,86 @@ ol {
 }
 
 ol.even {
-  margin-left: calc(#{$radius} * 3 / 2 - #{$border});
-  margin-top: calc((#{$radius} + 4 * #{$border}) * -1.732050808 / 2);
+  margin-top: calc(-0.5 * #{$radius});
 }
 
 ol.odd {
-  margin-top: calc(-1 * #{$radius} + -1 * #{$border})
+  margin-top: calc(-0.5 * #{$radius});
+  margin-left: calc(#{$radius} - 0.5 * #{$border});
 }
 
 li.hex {
-  margin-top: calc(-2 * #{$border});
   margin-bottom: calc(-2 * #{$border});
   position: relative;
   display: inline-block;
   cursor: pointer;
-  margin-right: calc(#{$radius} - 3 * #{$border});
+  margin-right: calc(-2 * #{$border});
   margin-top: calc(-0 * #{$radius});
-  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   background: black;
+
+  .hex-inner {
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+    width: calc(#{$hex_size} - 2 * #{$border});
+    height: calc(#{$hex_size} - 2 * #{$border});
+    margin: $border;
+
+    &.road {
+      background-color: $road-color;
+
+      &:hover {
+        background-color: darken($road_color, 5%)
+      }
+    }
+
+    &.grass {
+      background-color: #228b22;
+
+      &:hover {
+        background-color: darken($grass_color, 10%)
+      }
+    }
+
+    &.river {
+      background-color: #227b8b;
+
+      &:hover {
+        background-color: darken($river_color, 10%)
+      }
+    }
+
+    &.mountain {
+      background-color: #504646;
+
+      &:hover {
+        background-color: darken($mountain_color, 10%)
+      }
+    }
+  }
 }
 
-.hex-inner {
-  -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+li.hex-offset {
+  margin-bottom: calc(-2 * #{$border});
+  position: relative;
+  display: inline-block;
+  margin-right: calc(-2 * #{$border});
+  margin-top: calc(-0 * #{$radius});
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 
-  width: calc(#{$hex_size} - 2 * #{$border});
-  height: calc(#{$hex_size} - 2 * #{$border});
-  margin: $border;
-  background: forestgreen;
+  .hex-inner {
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 
-  &:hover {
-    background-color: darkgreen;
+    width: calc(#{$hex_size} - 2 * #{$border});
+    height: calc(#{$hex_size} - 2 * #{$border});
+    margin: $border;
   }
+}
+
+.player {
+  background-color: yellow;
 }
