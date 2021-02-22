@@ -1,8 +1,3 @@
-<li class="hex" id="<%= hex.x %>_<%= hex.y %>">
-  <div class="hex-inner <%= hex.terrain %> <%= hex.player_id ? 'player' : '' %>">
-    <% if hex.player_id %>
-      <br>
-      <%= hex.q %> | <%= hex.r %>
-    <% end %>
-  </div>
+<li class="hex" id="<%= hex.id %>" data-q="<%= hex.q %>" data-r="<%= hex.r %>" data-reflex="click->Users#move">
+  <%= render partial: 'hex_inner', locals: {hex: hex} %>
 </li>

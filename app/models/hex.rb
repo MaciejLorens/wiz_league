@@ -8,7 +8,9 @@ class Hex
   field :y, type: Integer
   field :z, type: Integer
   field :terrain, type: String
-  field :user_id, type: Integer
+  field :user_id, type: String
+
+  belongs_to :user, optional: true
 
   TERRAIN = %w[road grass river mountain]
 

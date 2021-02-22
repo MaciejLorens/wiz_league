@@ -54,7 +54,7 @@ li.hex {
       background-color: $road-color;
 
       &:hover {
-        background-color: darken($road_color, 5%)
+        background-color: darken($road_color, 5%);
       }
     }
 
@@ -62,7 +62,7 @@ li.hex {
       background-color: #228b22;
 
       &:hover {
-        background-color: darken($grass_color, 10%)
+        background-color: darken($grass_color, 10%);
       }
     }
 
@@ -70,7 +70,7 @@ li.hex {
       background-color: #227b8b;
 
       &:hover {
-        background-color: darken($river_color, 10%)
+        background-color: darken($river_color, 10%);
       }
     }
 
@@ -78,7 +78,7 @@ li.hex {
       background-color: #504646;
 
       &:hover {
-        background-color: darken($mountain_color, 10%)
+        background-color: darken($mountain_color, 10%);
       }
     }
 
@@ -88,6 +88,10 @@ li.hex {
 
     &.player {
       background-color: $player_color;
+
+      &:hover {
+        background-color: $player_color;
+      }
     }
   }
 }
