@@ -1,20 +1,18 @@
-<div class="container">
-  <% (2 * @range + 1).times do |row| %>
-    <ol class="<%= row.even? ? 'even' : 'odd' %>">
-      <% offsets = ((@range - row) / 2.0).abs %>
-      <% offsets = @range.even? ? offsets.floor : offsets.ceil %>
-      <% offsets.times do |offset| %>
-        <%= render partial: 'hex_offset' %>
-      <% end %>
+<% (2 * range + 1).times do |row| %>
+  <ol class="<%= row.even? ? 'even' : 'odd' %>">
+    <% offsets = ((range - row) / 2.0).abs %>
+    <% offsets = range.even? ? offsets.floor : offsets.ceil %>
+    <% offsets.times do |offset| %>
+      <%= render partial: 'home/hex_offset' %>
+    <% end %>
 
-      <% (2 * @range + 1 - (@range - row).abs).times do |hex| %>
-        <% hex = @hexes.shift %>
-        <% if hex.terrain == 'bedrock' %>
-          <%= render partial: 'hex_offset' %>
-        <% else %>
-          <%= render partial: 'hex', locals: { hex: hex } if hex.present? %>
-        <% end %>
+    <% (2 * range + 1 - (range - row).abs).times do |hex| %>
+      <% hex = hexes.shift %>
+      <% if hex.terrain == 'bedrock' %>
+        <%= render partial: 'home/hex_offset' %>
+      <% else %>
+        <%= render partial: 'home/hex', locals: { hex: hex } if hex.present? %>
       <% end %>
-    </ol>
-  <% end %>
-</div>
+    <% end %>
+  </ol>
+<% end %>

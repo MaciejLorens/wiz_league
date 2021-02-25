@@ -1,8 +1,23 @@
 User.delete_all
 Hex.delete_all
 
-user1 = User.create(email: 'a@a.pl', password: '1234567890', password_confirmation: '1234567890')
-user2 = User.create(email: 'b@b.pl', password: '1234567890', password_confirmation: '1234567890')
+user1 = User.create(
+  email: 'a@a.pl',
+  password: '1234567890',
+  password_confirmation: '1234567890',
+  speed: 20,
+  movement: 100,
+  max_movement: 500
+)
+
+user2 = User.create(
+  email: 'b@b.pl',
+  password: '1234567890',
+  password_confirmation: '1234567890',
+  speed: 10,
+  movement: 300,
+  max_movement: 300
+)
 
 50.times do |q|
   50.times do |r|

@@ -30,4 +30,12 @@ class Hex
     [q, r]
   end
 
+  def movement_required
+    case terrain
+    when 'road' then 100;
+    when 'grass' then 200;
+    when 'river' then 300;
+    when 'mountain' then 400;
+    end
+  end
 end

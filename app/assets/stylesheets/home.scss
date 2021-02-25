@@ -1,3 +1,10 @@
+$none-color: #ffffff;
+$road_color: #4b0e0e;
+$grass_color: #228b22;
+$river_color: #227b8b;
+$mountain_color: #504646;
+$player_color: #FFFF00;
+
 .map {
   width: 660px;
   border: 1px solid black;
@@ -24,7 +31,50 @@
   }
 }
 
+@keyframes example {
+  to {
+    margin-left: 100%;
+  }
+}
 
+.meter {
+  margin-top: -25px;
+  height: 30px;
+  width: 10px;
+  background-color: grey;
+  animation-name: example;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.movement_legend {
+  div {
+    height: 20px;
+    width: 100px;
+    display: table-cell;
+    padding: 0;
+  }
+
+  .none {
+    background-color: $none-color;
+  }
+
+  .road {
+    background-color: $road-color;
+  }
+
+  .grass {
+    background-color: $grass-color;
+  }
+
+  .river {
+    background-color: $river-color;
+  }
+
+  .mountain {
+    background-color: $mountain-color;
+  }
+}
 
 // ==== hex
 

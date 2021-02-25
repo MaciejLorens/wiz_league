@@ -7,8 +7,15 @@
     <list default="true" id="da193253-14f4-4792-9be1-084cf317a3ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_hex-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_hex-style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/hex.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/hex.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/reflexes/counter_reflex.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/reflexes/users_reflex.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/reflexes/users_reflex.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/_hex.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_hex.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/_map.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/_map.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +59,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/reflexes" />
       <recent name="$PROJECT_DIR$/app/views/home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/home" />
+      <recent name="$PROJECT_DIR$/app/views/home/_movement_metter.html.erb" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: wiz_league">
@@ -178,6 +189,11 @@
       <workItem from="1613983174560" duration="19085000" />
       <workItem from="1614014533380" duration="5373000" />
       <workItem from="1614029212230" duration="1832000" />
+      <workItem from="1614069603310" duration="13000" />
+      <workItem from="1614185551132" duration="719000" />
+      <workItem from="1614188290466" duration="5120000" />
+      <workItem from="1614242311030" duration="8452000" />
+      <workItem from="1614257890579" duration="1972000" />
     </task>
     <servers />
   </component>
