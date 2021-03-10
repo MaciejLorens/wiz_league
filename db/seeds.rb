@@ -37,4 +37,3 @@ end
 Hex.update_all(user_id: nil)
 Hex.find_by(q: 20, r: 20).update(user_id: user1.id)
 Hex.find_by(q: 22, r: 22).update(user_id: user2.id)
-
