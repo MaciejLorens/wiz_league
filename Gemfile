@@ -43,3 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'stimulus_reflex', '~> 3.4'
 
 gem 'cable_ready', '~> 4.5'
+
+gem "async", "~> 1.28"

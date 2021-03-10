@@ -58,7 +58,7 @@ ol.odd {
     }
 
     &.grass {
-      background-color: #228b22;
+      background-color: $grass_color;
 
       &:hover {
         background-color: darken($grass_color, 10%);
@@ -66,7 +66,7 @@ ol.odd {
     }
 
     &.river {
-      background-color: #227b8b;
+      background-color: $river_color;
 
       &:hover {
         background-color: darken($river_color, 10%);
@@ -74,7 +74,7 @@ ol.odd {
     }
 
     &.mountain {
-      background-color: #504646;
+      background-color: $mountain_color;
 
       &:hover {
         background-color: darken($mountain_color, 10%);
@@ -91,6 +91,14 @@ ol.odd {
       &:hover {
         background-color: $player_color;
       }
+    }
+
+    &.fire {
+      background-color: #ff0000;
+    }
+
+    &.ice {
+      background-color: #003bff;
     }
   }
 }

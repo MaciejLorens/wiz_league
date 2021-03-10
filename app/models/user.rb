@@ -18,10 +18,16 @@ class User
 
   include Mongoid::Timestamps
 
+  has_many :spells
   has_one :hex
 
   def current_movement
     return max_movement if movement_at.blank?
     [(movement + (Time.now - self.movement_at) * speed).to_i, max_movement].min
   end
+
+  def current_spell
+    spells.first
+  end
+
 end

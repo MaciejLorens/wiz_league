@@ -10,6 +10,6 @@
   <div class="mountain"></div>
 </div>
 
-<div id="max_movement" style="width: <%= current_user.max_movement - 5 %>px">
-  <%= render partial: 'home/meter', locals: {user: current_user} %>
+<div id="max_movement" style="width: <%= User.first.max_movement - 5 %>px">
+  <%= render partial: 'home/meter', locals: {user: User.first} %>
 </div>
