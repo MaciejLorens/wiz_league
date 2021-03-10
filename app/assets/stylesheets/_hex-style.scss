@@ -94,11 +94,11 @@ ol.odd {
     }
 
     &.fire {
-      background-color: #ff0000;
+      background-image: url("spells/fire.png");
     }
 
     &.ice {
-      background-color: #003bff;
+      background-image: url("spells/ice.png");
     }
   }
 }

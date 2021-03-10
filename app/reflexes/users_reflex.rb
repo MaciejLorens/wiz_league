@@ -27,18 +27,28 @@ class UsersReflex < ApplicationReflex
       start_hex.update(user_id: nil)
       end_hex.update(user_id: current_user.id)
 
-      render_hex(start_hex)
-      render_hex(end_hex)
-
+      render_hexes(start_hex, end_hex)
       render_map(end_hex)
       render_movement_bar
     end
   end
 
   def cast(start_hex, end_hex)
-    start_hex.hex_linedraw(end_hex).each do |hex|
-      hex.spells << current_user.current_spell
-      render_hex(hex)
+    line_hexes = start_hex.hex_linedraw(end_hex)
+
+    Thread.new do
+      (line_hexes.count + 1).times do |index|
+        previous_hex = line_hexes[index - 1]
+        previous_hex.spells.delete(current_user.current_spell) if previous_hex
+
+        current_hex = line_hexes[index]
+        if current_hex
+          current_hex.spells << current_user.current_spell
+          render_hexes(previous_hex, current_hex)
+          cable_ready["visitors"].broadcast
+          sleep 1
+        end
+      end
     end
   end
 
@@ -52,11 +62,13 @@ class UsersReflex < ApplicationReflex
     )
   end
 
-  def render_hex(hex)
-    cable_ready["visitors"].inner_html(
-      selector: "#hex_#{hex.id}",
-      html: render(partial: "home/hex_inner", locals: { hex: hex })
-    )
+  def render_hexes(*hexes)
+    hexes.each do |hex|
+      cable_ready["visitors"].inner_html(
+        selector: "#hex_#{hex.id}",
+        html: render(partial: "home/hex_inner", locals: { hex: hex })
+      )
+    end
   end
 
   def render_movement_bar

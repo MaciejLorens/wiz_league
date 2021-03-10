@@ -4,7 +4,7 @@ user1 = User.create(
   email: 'a@a.pl',
   password: '1234567890',
   password_confirmation: '1234567890',
-  speed: 50,
+  speed: 100,
   movement: 200,
   max_movement: 500
 )
