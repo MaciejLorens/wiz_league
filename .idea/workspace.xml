@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="da193253-14f4-4792-9be1-084cf317a3ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_hex-style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_hex-style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/spell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/spell.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/reflexes/users_reflex.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/reflexes/users_reflex.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +197,7 @@
       <workItem from="1615382587774" duration="15000" />
       <workItem from="1615382751113" duration="7165000" />
       <workItem from="1615400112112" duration="2185000" />
-      <workItem from="1615407301883" duration="903000" />
+      <workItem from="1615407301883" duration="1955000" />
     </task>
     <servers />
   </component>

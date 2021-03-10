@@ -11,7 +11,7 @@ class UsersReflex < ApplicationReflex
     if start_hex.distance(end_hex) == 1
       move(start_hex, end_hex)
     else
-      cast(start_hex, end_hex)
+      current_user.current_spell.cast(start_hex, end_hex)
     end
 
     cable_ready["visitors"].broadcast
@@ -30,25 +30,6 @@ class UsersReflex < ApplicationReflex
       render_hexes(start_hex, end_hex)
       render_map(end_hex)
       render_movement_bar
-    end
-  end
-
-  def cast(start_hex, end_hex)
-    line_hexes = start_hex.hex_linedraw(end_hex)
-
-    Thread.new do
-      (line_hexes.count + 1).times do |index|
-        previous_hex = line_hexes[index - 1]
-        previous_hex.spells.delete(current_user.current_spell) if previous_hex
-
-        current_hex = line_hexes[index]
-        if current_hex
-          current_hex.spells << current_user.current_spell
-          render_hexes(previous_hex, current_hex)
-          cable_ready["visitors"].broadcast
-          sleep 1
-        end
-      end
     end
   end
 
