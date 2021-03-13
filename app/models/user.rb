@@ -53,15 +53,15 @@ class User
       update(hp: current_hp - total_damage, hp_at: Time.now)
     end
 
-    render_user
-    cable_ready["visitors-#{id}"].broadcast
+    render_hp
   end
 
-  def render_user
+  def render_hp
     cable_ready["visitors-#{id}"].inner_html(
       selector: "#max_hp",
       html: render(partial: "home/current_hp", locals: { user: self })
     )
+    cable_ready["visitors-#{id}"].broadcast
   end
 
 end

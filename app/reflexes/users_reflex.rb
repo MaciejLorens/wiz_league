@@ -25,6 +25,9 @@ class UsersReflex < ApplicationReflex
 
       start_hex.update(user_id: nil)
       end_hex.update(user_id: current_user.id)
+      current_user.apply_damage(*end_hex.spells)
+      start_hex.render_hex
+      end_hex.render_hex
 
       render_map(end_hex)
       render_movement_bar
