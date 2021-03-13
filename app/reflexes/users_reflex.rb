@@ -10,7 +10,11 @@ class UsersReflex < ApplicationReflex
     if start_hex.distance(end_hex) == 1
       move(start_hex, end_hex)
     else
-      current_user.current_spell.cast(start_hex, end_hex)
+      if current_user.current_mp >= current_user.current_spell.mp
+        current_user.update(mp: current_user.current_mp - current_user.current_spell.mp)
+        current_user.render_mp
+        current_user.current_spell.cast(start_hex, end_hex)
+      end
     end
 
     cable_ready["visitors"].broadcast

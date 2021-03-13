@@ -87,7 +87,6 @@ class Hex
   end
 
   def render_hex
-    Rails.logger.info '     ===== hex_callback render_hex ====='
     cable_ready["visitors"].inner_html(
       selector: "#hex_#{id}",
       html: render(partial: "home/hex_inner", locals: { hex: self })

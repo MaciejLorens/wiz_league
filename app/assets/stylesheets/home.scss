@@ -53,15 +53,21 @@ $player_color: #FFFF00;
   animation-fill-mode: forwards;
 }
 
-#max_hp {
-  //margin-top: -25px;
+#max_hp, #max_mp{
   height: 20px;
-  //width: 10px;
 }
 
 .current_hp {
   height: 100%;
-  background-color: green;
+  background-color: darkgreen;
+  animation-name: width_animation;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.current_mp {
+  height: 100%;
+  background-color: darkblue;
   animation-name: width_animation;
   animation-timing-function: linear;
   animation-fill-mode: forwards;

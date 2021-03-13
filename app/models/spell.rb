@@ -9,6 +9,7 @@ class Spell
 
   field :type, type: String
   field :damage, type: Float
+  field :mp, type: Float
 
   belongs_to :user, optional: true
   has_and_belongs_to_many :hex

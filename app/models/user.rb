@@ -18,10 +18,16 @@ class User
   field :movement_at, type: Time
   field :max_movement, type: Integer, default: 0
 
-  field :regeneration_hp, type: Integer, default: 0
-  field :hp, type: Integer, default: 0
+  field :regeneration_hp, type: Float, default: 0
+  field :hp, type: Float, default: 0
+  field :max_hp, type: Float, default: 0
   field :hp_at, type: Time
-  field :max_hp, type: Integer, default: 0
+
+  field :regeneration_mp, type: Float, default: 0
+  field :mp, type: Float, default: 0
+  field :max_mp, type: Float, default: 0
+  field :mp_at, type: Time
+
   field :death, type: Boolean, default: false
 
   include Mongoid::Timestamps
@@ -36,7 +42,12 @@ class User
 
   def current_hp
     return max_hp if hp_at.blank?
-    [(hp + (Time.now - self.hp_at) * regeneration_hp).to_i, max_hp].min
+    [hp + (Time.now - self.hp_at) * regeneration_hp, max_hp].min
+  end
+
+  def current_mp
+    return max_mp if mp_at.blank?
+    [mp + (Time.now - self.mp_at) * regeneration_mp, max_mp].min
   end
 
   def current_spell
@@ -60,6 +71,14 @@ class User
     cable_ready["visitors-#{id}"].inner_html(
       selector: "#max_hp",
       html: render(partial: "home/current_hp", locals: { user: self })
+    )
+    cable_ready["visitors-#{id}"].broadcast
+  end
+
+  def render_mp
+    cable_ready["visitors-#{id}"].inner_html(
+      selector: "#max_mp",
+      html: render(partial: "home/current_mp", locals: { user: self })
     )
     cable_ready["visitors-#{id}"].broadcast
   end
