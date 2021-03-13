@@ -2,6 +2,8 @@
   <%= render partial: 'map', locals: { hexes: @hexes, range: @range } %>
 </div>
 
+<br>
+
 <div class="movement_legend">
   <div class="none"></div>
   <div class="road"></div>
@@ -10,6 +12,22 @@
   <div class="mountain"></div>
 </div>
 
-<div id="max_movement" style="width: <%= User.first.max_movement - 5 %>px">
-  <%= render partial: 'home/meter', locals: {user: User.first} %>
+
+<div id="max_movement" style="width: <%= current_user.max_movement - 5 %>px">
+  <%= render partial: 'home/meter', locals: { user: current_user } %>
+</div>
+
+<br>
+
+<!--<div class="hp_legend" style="width: <%#= User.first.max_hp %>px"></div>-->
+
+<!--<div id="max_hp" style="width: <%#= User.first.max_hp - 5 %>px">-->
+<%#= render partial: 'home/hp', locals: {user: User.first} %>
+<!--</div>-->
+
+
+
+
+<div id="max_hp" style="width: <%= current_user.max_hp %>px">
+  <%= render partial: 'current_hp', locals: { user: current_user } %>
 </div>

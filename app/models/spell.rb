@@ -21,29 +21,20 @@ class Spell
     line_hexes = start_hex.hex_linedraw(end_hex)
 
     Thread.new do
-      (line_hexes.count + 1).times do |index|
-        previous_hex = line_hexes[index - 1]
-        previous_hex.spells.delete(self) if previous_hex
+      (1..line_hexes.count).each do |i|
+        unless i == 0
+          previous_hex = line_hexes[i - 1]
+          previous_hex.spells.delete(self)
+        end
 
-        current_hex = line_hexes[index]
+        current_hex = line_hexes[i]
         if current_hex
           current_hex.spells << self
-          render_hexes(previous_hex, current_hex)
-          cable_ready["visitors"].broadcast
-          sleep 1
         end
+
+        cable_ready["visitors"].broadcast
+        sleep 1
       end
-    end
-  end
-
-  private
-
-  def render_hexes(*hexes)
-    hexes.each do |hex|
-      cable_ready["visitors"].inner_html(
-        selector: "#hex_#{hex.id}",
-        html: render(partial: "home/hex_inner", locals: { hex: hex })
-      )
     end
   end
 end

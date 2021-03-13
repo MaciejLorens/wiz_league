@@ -4,7 +4,6 @@ class UsersReflex < ApplicationReflex
   delegate :current_user, to: :connection
 
   def action
-    current_user = User.first
     start_hex = current_user.reload.hex
     end_hex = Hex.find(element.dataset.id)
 

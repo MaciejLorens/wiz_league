@@ -1,4 +1,7 @@
 class Hex
+  include CableReady::Broadcaster
+  delegate :render, to: ApplicationController
+
   include Mongoid::Document
   include Mongoid::Timestamps
 
@@ -10,8 +13,10 @@ class Hex
   field :terrain, type: String
   field :user_id, type: String
 
-  has_and_belongs_to_many :spells
+  has_and_belongs_to_many :spells, after_add: :spell_added, after_remove: :spell_remove
   belongs_to :user, optional: true
+
+  before_save :before_save
 
   TERRAIN = %w[road grass river mountain]
 
@@ -81,6 +86,31 @@ class Hex
 
   def lerp(a, b, t)
     a + (b - a) * t
+  end
+
+  protected
+
+  def before_save
+    if user_id.present? && user_id_changed?
+      user.apply_damage(*spells)
+      render_hex
+    end
+  end
+
+  def spell_added(spell)
+    user.apply_damage(spell) if user_id.present?
+    render_hex
+  end
+
+  def spell_remove(spell)
+    render_hex
+  end
+
+  def render_hex
+    cable_ready["visitors"].inner_html(
+      selector: "#hex_#{id}",
+      html: render(partial: "home/hex_inner", locals: { hex: self })
+    )
   end
 
 end

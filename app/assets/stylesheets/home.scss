@@ -1,4 +1,4 @@
-$none-color: #ffffff;
+$none-color: #c1b8b8;
 $road_color: #4b0e0e;
 $grass_color: #228b22;
 $river_color: #227b8b;
@@ -37,12 +37,32 @@ $player_color: #FFFF00;
   }
 }
 
+@keyframes width_animation {
+  to {
+    width: 100%;
+  }
+}
+
 .meter {
   margin-top: -25px;
   height: 30px;
   width: 10px;
   background-color: grey;
   animation-name: example;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+#max_hp {
+  //margin-top: -25px;
+  height: 20px;
+  //width: 10px;
+}
+
+.current_hp {
+  height: 100%;
+  background-color: green;
+  animation-name: width_animation;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -74,6 +94,14 @@ $player_color: #FFFF00;
   .mountain {
     background-color: $mountain-color;
   }
+}
+
+.hp_legend {
+  height: 20px;
+  width: 100px;
+  display: table-cell;
+  padding: 0;
+  background-color: $grass-color;
 }
 
 // ==== hex

@@ -6,7 +6,10 @@ user1 = User.create(
   password_confirmation: '1234567890',
   speed: 100,
   movement: 200,
-  max_movement: 500
+  max_movement: 500,
+  hp: 200,
+  max_hp: 400,
+  regeneration_hp: 10,
 )
 
 user2 = User.create(
@@ -15,14 +18,17 @@ user2 = User.create(
   password_confirmation: '1234567890',
   speed: 30,
   movement: 300,
-  max_movement: 300
+  max_movement: 300,
+  hp: 200,
+  max_hp: 400,
+  regeneration_hp: 10,
 )
 
-user1.spells.create(type: 'fire', damage: 11)
-user1.spells.create(type: 'ice', damage: 6)
+user1.spells.create(type: 'fire', damage: 110)
+user1.spells.create(type: 'ice', damage: 60)
 
-user2.spells.create(type: 'fire', damage: 14)
-user2.spells.create(type: 'ice', damage: 3)
+user2.spells.create(type: 'fire', damage: 140)
+user2.spells.create(type: 'ice', damage: 30)
 
 50.times do |q|
   50.times do |r|
