@@ -35,6 +35,23 @@ class User
   has_many :spells
   has_one :hex
 
+  def move(end_hex)
+    return if end_hex.stamina_required > current_stamina
+
+    update(stamina: current_stamina - end_hex.stamina_required, stamina_at: Time.now)
+    hex.update(user_id: nil)
+    hex.render_hex
+    end_hex.update(user_id: id)
+    end_hex.render_hex
+    apply_damage(*end_hex.spells)
+
+    render_stamina_bar
+    render_map(end_hex)
+
+    cable_ready["visitors"].broadcast
+    cable_ready["visitors-#{id}"].broadcast
+  end
+
   def current_stamina
     return stamina_max if stamina_at.blank?
     [(stamina + (Time.now - stamina_at) * stamina_reg).to_i, stamina_max].min
@@ -65,6 +82,7 @@ class User
     end
 
     render_hp
+    cable_ready["visitors-#{id}"].broadcast
   end
 
   def render_hp
@@ -72,7 +90,6 @@ class User
       selector: "#max_hp",
       html: render(partial: "home/current_hp", locals: { user: self })
     )
-    cable_ready["visitors-#{id}"].broadcast
   end
 
   def render_mp
@@ -80,7 +97,20 @@ class User
       selector: "#max_mp",
       html: render(partial: "home/current_mp", locals: { user: self })
     )
-    cable_ready["visitors-#{id}"].broadcast
   end
 
+  def render_stamina_bar
+    cable_ready["visitors-#{id}"].inner_html(
+      selector: "#stamina_max",
+      html: render(partial: "home/current_stamina", locals: { user: self })
+    )
+  end
+
+  def render_map(hex)
+    hexes = hex.neighbors(5)
+    cable_ready["visitors-#{id}"].inner_html(
+      selector: "#map",
+      html: render(partial: "home/map", locals: { hexes: hexes, range: 5 })
+    )
+  end
 end
