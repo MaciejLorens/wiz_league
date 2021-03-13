@@ -93,8 +93,8 @@ class Hex
   def before_save
     if user_id.present? && user_id_changed?
       user.apply_damage(*spells)
-      render_hex
     end
+    render_hex
   end
 
   def spell_added(spell)

@@ -26,7 +26,6 @@ class UsersReflex < ApplicationReflex
       start_hex.update(user_id: nil)
       end_hex.update(user_id: current_user.id)
 
-      render_hexes(start_hex, end_hex)
       render_map(end_hex)
       render_movement_bar
     end
