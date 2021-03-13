@@ -10,11 +10,7 @@ class UsersReflex < ApplicationReflex
     if start_hex.distance(end_hex) == 1
       current_user.move(end_hex)
     else
-      if current_user.current_mp >= current_user.current_spell.mp
-        current_user.update(mp: current_user.current_mp - current_user.current_spell.mp)
-        current_user.render_mp
-        current_user.current_spell.cast(start_hex, end_hex)
-      end
+      current_user.cast(end_hex)
     end
 
     morph :nothing

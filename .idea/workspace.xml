@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="da193253-14f4-4792-9be1-084cf317a3ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/spell.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/spell.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/reflexes/users_reflex.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/reflexes/users_reflex.rb" afterDir="false" />
     </list>

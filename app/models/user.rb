@@ -52,6 +52,35 @@ class User
     cable_ready["visitors-#{id}"].broadcast
   end
 
+  def cast(end_hex)
+    return if current_spell.mp > current_mp
+
+    update(mp: current_mp - current_spell.mp, mp_at: Time.now)
+    render_mp
+    cable_ready["visitors-#{id}"].broadcast
+
+    line_hexes = hex.hex_linedraw(end_hex)
+    Thread.new do
+      (1..line_hexes.count).each do |i|
+        unless i == 0
+          previous_hex = line_hexes[i - 1]
+          previous_hex.reload.spells.delete(current_spell)
+          previous_hex.render_hex
+        end
+
+        current_hex = line_hexes[i]
+        if current_hex
+          current_hex.reload.spells << current_spell
+          current_hex.user.apply_damage(current_spell) if current_hex.user
+          current_hex.render_hex
+        end
+
+        cable_ready["visitors"].broadcast
+        sleep 1
+      end
+    end
+  end
+
   def current_stamina
     return stamina_max if stamina_at.blank?
     [(stamina + (Time.now - stamina_at) * stamina_reg).to_i, stamina_max].min
