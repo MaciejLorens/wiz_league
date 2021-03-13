@@ -1,0 +1,5 @@
+<div class="current_stamina"
+     style="margin-left: <%= user.stamina - 5 %>px;
+       animation-duration: <%= (user.stamina_max - user.stamina).to_f / user.stamina_reg %>s;
+     ">
+</div>

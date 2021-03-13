@@ -4,7 +4,7 @@
 
 <br>
 
-<div class="movement_legend">
+<div class="stamina_legend">
   <div class="none"></div>
   <div class="road"></div>
   <div class="grass"></div>
@@ -13,8 +13,8 @@
 </div>
 
 
-<div id="max_movement" style="width: <%= current_user.max_movement - 5 %>px">
-  <%= render partial: 'home/meter', locals: { user: current_user } %>
+<div id="stamina_max" style="width: <%= current_user.stamina_max - 5 %>px">
+  <%= render partial: 'current_stamina', locals: { user: current_user } %>
 </div>
 
 <br>

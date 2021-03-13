@@ -43,7 +43,7 @@ $player_color: #FFFF00;
   }
 }
 
-.meter {
+.current_stamina {
   margin-top: -25px;
   height: 30px;
   width: 10px;
@@ -73,7 +73,7 @@ $player_color: #FFFF00;
   animation-fill-mode: forwards;
 }
 
-.movement_legend {
+.stamina_legend {
   div {
     height: 20px;
     width: 100px;

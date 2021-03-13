@@ -24,8 +24,8 @@ class UsersReflex < ApplicationReflex
   end
 
   def move(start_hex, end_hex)
-    if current_user.current_movement >= end_hex.movement_required
-      current_user.update(movement: current_user.current_movement - end_hex.movement_required, movement_at: Time.now)
+    if current_user.current_stamina >= end_hex.stamina_required
+      current_user.update(stamina: current_user.current_stamina - end_hex.stamina_required, stamina_at: Time.now)
 
       start_hex.update(user_id: nil)
       end_hex.update(user_id: current_user.id)
@@ -34,7 +34,7 @@ class UsersReflex < ApplicationReflex
       end_hex.render_hex
 
       render_map(end_hex)
-      render_movement_bar
+      render_stamina_bar
     end
   end
 
@@ -57,10 +57,10 @@ class UsersReflex < ApplicationReflex
     end
   end
 
-  def render_movement_bar
+  def render_stamina_bar
     cable_ready["visitors-#{current_user.id}"].inner_html(
-      selector: "#max_movement",
-      html: render(partial: "home/meter", locals: { user: current_user })
+      selector: "#stamina_max",
+      html: render(partial: "home/current_stamina", locals: { user: current_user })
     )
   end
 

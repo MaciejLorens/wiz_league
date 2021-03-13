@@ -30,7 +30,7 @@ class Hex
     [q, r]
   end
 
-  def movement_required
+  def stamina_required
     case terrain
     when 'road' then
       100;

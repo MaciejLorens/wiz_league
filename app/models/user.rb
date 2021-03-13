@@ -13,10 +13,10 @@ class User
   field :reset_password_sent_at, type: Time
   field :remember_created_at, type: Time
 
-  field :speed, type: Integer, default: 0
-  field :movement, type: Integer, default: 0
-  field :movement_at, type: Time
-  field :max_movement, type: Integer, default: 0
+  field :stamina, type: Float, default: 0
+  field :stamina_max, type: Float, default: 0
+  field :stamina_reg, type: Float, default: 0
+  field :stamina_at, type: Time
 
   field :regeneration_hp, type: Float, default: 0
   field :hp, type: Float, default: 0
@@ -35,9 +35,9 @@ class User
   has_many :spells
   has_one :hex
 
-  def current_movement
-    return max_movement if movement_at.blank?
-    [(movement + (Time.now - self.movement_at) * speed).to_i, max_movement].min
+  def current_stamina
+    return stamina_max if stamina_at.blank?
+    [(stamina + (Time.now - stamina_at) * stamina_reg).to_i, stamina_max].min
   end
 
   def current_hp
