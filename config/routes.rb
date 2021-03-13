@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  post 'home/sign_as'
 end
