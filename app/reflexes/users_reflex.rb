@@ -7,10 +7,10 @@ class UsersReflex < ApplicationReflex
     start_hex = current_user.reload.hex
     end_hex = Hex.find(element.dataset.id)
 
-    if start_hex.distance(end_hex) == 1
-      current_user.move(end_hex)
-    else
+    if start_hex.distance(end_hex) > 1
       current_user.cast(end_hex)
+    elsif start_hex.distance(end_hex) == 1
+      current_user.move(end_hex)
     end
 
     morph :nothing
