@@ -10,10 +10,9 @@
     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body>
+  <body data-controller="hotkeys command" data-hotkeys-bindings-value="<%= hotkeys %>">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
     <%= yield %>
   </body>
 </html>

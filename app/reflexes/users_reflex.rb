@@ -15,4 +15,24 @@ class UsersReflex < ApplicationReflex
 
     morph :nothing
   end
+
+  def spell_q
+    cable_ready.console_log(message: "spell_q spell_q").broadcast
+    morph :nothing
+  end
+
+  def spell_w
+    cable_ready.console_log(message: "spell_w spell_w").broadcast
+    morph :nothing
+  end
+
+  def spell_e
+    cable_ready.console_log(message: "spell_e spell_e").broadcast
+    morph :nothing
+  end
+
+  def spell_r
+    cable_ready.console_log(message: "spell_r spell_r").broadcast
+    morph :nothing
+  end
 end

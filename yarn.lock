@@ -887,10 +887,20 @@
   dependencies:
     "@stimulus/mutation-observers" "^2.0.0"
 
+"@stimulus/core@https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/core.tar.gz":
+  version "1.1.1"
+  resolved "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/core.tar.gz#03ea0bb10e85684dab4151bd5ae1a767cc5c52a9"
+  dependencies:
+    "@stimulus/mutation-observers" "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/mutation-observers.tar.gz"
+
 "@stimulus/multimap@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@stimulus/multimap/-/multimap-2.0.0.tgz#420cfa096ed6538df4a91dbd2b2842c1779952b2"
   integrity sha512-pMBCewkZCFVB3e5mEMoyO9+9aKzHDITmf3OnPun51YWxlcPdHcwbjqm1ylK63fsoduIE+RowBpFwFqd3poEz4w==
+
+"@stimulus/multimap@https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/multimap.tar.gz":
+  version "1.1.1"
+  resolved "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/multimap.tar.gz#3f64d0aa7aa49d10060004f0e26a400810a54590"
 
 "@stimulus/mutation-observers@^2.0.0":
   version "2.0.0"
@@ -899,10 +909,20 @@
   dependencies:
     "@stimulus/multimap" "^2.0.0"
 
+"@stimulus/mutation-observers@https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/mutation-observers.tar.gz":
+  version "1.1.1"
+  resolved "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/mutation-observers.tar.gz#33a01c587b9fa09cb7378dc9b54a83fdebd70bfa"
+  dependencies:
+    "@stimulus/multimap" "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/multimap.tar.gz"
+
 "@stimulus/webpack-helpers@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-2.0.0.tgz#54296d2a2dffd4f962d2e802d99a3fdd84b8845f"
   integrity sha512-D6tJWsAC024MwGEIKlUVYU8Ln87mlrmiwHvYAjipg+s8H4eLxUMQ3PZkWyPevfipH+oR3leuHsjYsK1gN5ViQA==
+
+"@stimulus/webpack-helpers@https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/webpack-helpers.tar.gz":
+  version "1.1.1"
+  resolved "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/webpack-helpers.tar.gz#1f1b3d79ed21ec4930f28cb65fa0868bcbe96042"
 
 "@types/glob@^7.1.1":
   version "7.1.3"
@@ -3438,6 +3458,11 @@ hosted-git-info@^2.1.4:
   version "2.8.8"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
   integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
+
+hotkeys-js@^3.8.1:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/hotkeys-js/-/hotkeys-js-3.8.3.tgz#0331c2cde770e62d51d5d023133f7c4395f59008"
+  integrity sha512-rUmoryG4lEAtkjF5tcYaihrVoE86Fdw1BLqO/UiBWOOF56h32a6ax8oV4urBlinVtNNtArLlBq8igGfZf2tQnw==
 
 hpack.js@^2.1.6:
   version "2.1.6"
@@ -6761,6 +6786,14 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+stimulus-hotkeys@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stimulus-hotkeys/-/stimulus-hotkeys-1.0.3.tgz#f7c5ad22a00ea234dc47ac40370e88148091615c"
+  integrity sha512-4FsXUzTc8sY6CKKK4qyQ8FlEGEregXK15TZb3Sj+dbTPQ+1hMALBLi9AAuw4QCepKQlvo4bgYKz7gH/o/D7ZDA==
+  dependencies:
+    hotkeys-js "^3.8.1"
+    stimulus "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/stimulus.tar.gz"
+
 stimulus@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-2.0.0.tgz#713c8b91a72ef90914b90955f0e705f004403047"
@@ -6768,6 +6801,13 @@ stimulus@^2.0.0:
   dependencies:
     "@stimulus/core" "^2.0.0"
     "@stimulus/webpack-helpers" "^2.0.0"
+
+"stimulus@https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/stimulus.tar.gz":
+  version "1.1.1"
+  resolved "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/stimulus.tar.gz#6e0e097d712641214cc066e1b7aa83d308f0488c"
+  dependencies:
+    "@stimulus/core" "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/core.tar.gz"
+    "@stimulus/webpack-helpers" "https://github.com/stimulusjs/dev-builds/archive/b8cc8c4/@stimulus/webpack-helpers.tar.gz"
 
 stimulus_reflex@3.4.1:
   version "3.4.1"
