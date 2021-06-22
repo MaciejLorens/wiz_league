@@ -8,7 +8,6 @@ class HomeController < ApplicationController
   end
 
   def sign_as
-    Rails.logger.info "     ===== params: #{params[:id].inspect} ====="
     sign_in_and_redirect :user, User.find(params[:id])
   end
 end

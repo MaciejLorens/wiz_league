@@ -24,12 +24,28 @@
 <%# end %>
 
 <br>
-<%= form_with url: home_sign_as_path({ id: User.first.id }) do |f| %>
+<%= form_with url: home_sign_as_path({ id: User.all[0].id }) do |f| %>
   <%= f.submit 'User1', style: 'width: 100px; height: 50px' %>
 <% end %>
 <br>
-<%= form_with url: home_sign_as_path({ id: User.last.id }) do |f| %>
+<%= form_with url: home_sign_as_path({ id: User.all[1].id }) do |f| %>
   <%= f.submit 'User2', style: 'width: 100px; height: 50px' %>
+<% end %>
+<br>
+<%= form_with url: home_sign_as_path({ id: User.all[2].id }) do |f| %>
+  <%= f.submit 'User3', style: 'width: 100px; height: 50px' %>
+<% end %>
+<br>
+<%= form_with url: home_sign_as_path({ id: User.all[3].id }) do |f| %>
+  <%= f.submit 'User4', style: 'width: 100px; height: 50px' %>
+<% end %>
+<br>
+<%= form_with url: home_sign_as_path({ id: User.all[4].id }) do |f| %>
+  <%= f.submit 'User5', style: 'width: 100px; height: 50px' %>
+<% end %>
+<br>
+<%= form_with url: home_sign_as_path({ id: User.all[5].id }) do |f| %>
+  <%= f.submit 'User5', style: 'width: 100px; height: 50px' %>
 <% end %>
 
 <%#= render "devise/shared/links" %>
